@@ -690,6 +690,10 @@ video {
   height: 60vh;
 }
 
+.h-\[85\%\] {
+  height: 85%;
+}
+
 .min-h-\[\] {
   min-height: ;
 }
