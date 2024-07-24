@@ -79,7 +79,6 @@ if(window.innerWidth > 700) {
         trigger: ".aboutMe",
         start: "top 0%",
         end: "top -150%",
-        markers: true,
         scrub: 2,
         pin: true,
       },
@@ -88,8 +87,7 @@ if(window.innerWidth > 700) {
       .to(".aboutMeTitle", {
         scale: 40,
         duration:1,
-        ease:"power1.in",
-        stagger: .3,
+        ease:"power3.in",
         fontSize: "300px",
       })
       .fromTo(
@@ -107,6 +105,37 @@ if(window.innerWidth > 700) {
       );
 }
 
+
+if(window.innerWidth > 700) {
+  const tl4 = gsap.timeline({
+    scrollTrigger : {
+      scroller: "body",
+      trigger: ".mySkills",
+      start: "top 5%",
+      end: "60% -220%",
+      scrub : 2,
+      pin: true,
+    },
+  });
+
+  tl4.from(".skillLine1",{
+    x:"-200",
+    opacity: 0,
+    filter: "blur(10px)",
+  })
+  .from(".skillLine2",{
+    duration:.6,
+    x:"200",
+    opacity: 0,
+    filter: "blur(10px)",
+  })
+  .from(".skillLine3",{
+    duration:.6,
+    x:"-200",
+    opacity: 0,
+    filter: "blur(10px)",
+  })
+};
 
 
 
