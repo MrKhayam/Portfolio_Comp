@@ -1,17 +1,8 @@
 const cross = document.querySelector('.cross');
 const menu = document.querySelector('.menu');
-const cursor = document.querySelector('.custom-cursor');
 const tl = gsap.timeline();
 const tl2 = gsap.timeline();
 
-
-document.body.addEventListener('mousemove',(e)=>{
-    gsap.to(cursor,{
-        x:e.x,
-        y:e.y,
-        duration:.4
-    })
-})
 
 
 
@@ -63,7 +54,41 @@ tl.from(".image",{
 });
 
 
-console.log(window)
+
+if(window.innerWidth > 700) {
+    const tl3 = gsap.timeline({
+      scrollTrigger: {
+        scroller: "body",
+        trigger: ".aboutMe",
+        start: "top 0%",
+        end: "top -150%",
+        markers: true,
+        scrub: 2,
+        pin: true,
+      },
+    });
+    tl3
+      .to(".aboutMeTitle", {
+        scale: 50,
+        stagger: 1,
+        fontSize: "300px",
+      })
+      .fromTo(
+        ".aboutMeText",
+        {
+          display: "none",
+          opacity: 0,
+          scale: 0,
+        },
+        {
+          display: "flex",
+          opacity: 1,
+          scale: 1,
+        }
+      );
+}
+
+
 
 
 
