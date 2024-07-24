@@ -69,8 +69,8 @@ if(window.innerWidth > 700) {
     });
     tl3
       .to(".aboutMeTitle", {
-        scale: 50,
-        stagger: 1,
+        scale: 40,
+        stagger: .3,
         fontSize: "300px",
       })
       .fromTo(
