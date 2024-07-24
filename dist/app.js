@@ -1,22 +1,38 @@
 const cross = document.querySelector('.cross');
 const menu = document.querySelector('.menu');
+const cursor = document.querySelector('.custom-cursor');
 const tl = gsap.timeline();
 const tl2 = gsap.timeline();
 
 
-tl.from(".myName h1",{
-    opacity:0,
-    y:30,
-    duration:1,
-    delay:.2,
-    stagger:.2, 
-});
+document.body.addEventListener('mousemove',(e)=>{
+    gsap.to(cursor,{
+        x:e.x,
+        y:e.y,
+        duration:.4
+    })
+})
 
-tl.to(".loader",{
-    top:"-100%",
-    duration:.9,
-    ease:"power1.in"
-});
+
+
+
+
+
+
+
+// tl.from(".myName h1",{
+//     opacity:0,
+//     y:30,
+//     duration:1,
+//     delay:.2,
+//     stagger:.2, 
+// });
+
+// tl.to(".loader",{
+//     top:"-100%",
+//     duration:.9,
+//     ease:"power1.in"
+// });
 
 tl.from(".logo",{
     opacity:0,
