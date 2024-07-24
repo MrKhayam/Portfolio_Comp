@@ -53,6 +53,23 @@ tl.from(".image",{
     duration:.5,
 });
 
+if(window.innerWidth < 700){
+  tl.from(".aboutMeDiv",{
+    opacity:0,
+    x:-50,
+    duration:1,
+    delay:1,
+    filter: "blur(5px)",
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".btns",
+      start: "top 20%",
+      end: "top 20%",
+      scrub:2
+    },
+  })
+}
+
 
 
 if(window.innerWidth > 700) {
