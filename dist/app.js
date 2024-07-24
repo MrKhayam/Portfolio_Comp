@@ -70,6 +70,8 @@ if(window.innerWidth > 700) {
     tl3
       .to(".aboutMeTitle", {
         scale: 40,
+        duration:1,
+        ease:"power1.in",
         stagger: .3,
         fontSize: "300px",
       })
