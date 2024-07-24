@@ -67,9 +67,29 @@ if(window.innerWidth < 700){
       end: "top 20%",
       scrub:2
     },
-  })
+  });
+
 }
 
+
+if(window.innerWidth < 700){
+  tl.from(".skillLine h1",{
+    opacity:0,
+    x:-50,
+    duration:25,
+    delay:1,
+    filter: "blur(5px)",
+    stagger: 10,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".aboutMeDiv",
+      start: "100% 20%",
+      end: "top 20%",
+      markers:true,
+      scrub:2
+    }
+  })
+}
 
 
 if(window.innerWidth > 700) {
