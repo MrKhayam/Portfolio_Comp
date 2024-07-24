@@ -85,7 +85,6 @@ if(window.innerWidth < 700){
       trigger: ".aboutMeDiv",
       start: "100% 20%",
       end: "top 20%",
-      markers:true,
       scrub:2
     }
   })
