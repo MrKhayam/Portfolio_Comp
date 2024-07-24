@@ -21,16 +21,44 @@ tl.to(".loader",{
 tl.from(".logo",{
     opacity:0,
     y:20,
-    duration:.5,
-    delay:.3,
+    duration:.4,
+    delay:.2,
 });
 
-tl.from(".navLis",{
+if(window.innerWidth > 700){
+    tl.from(".navLis", {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      stagger: 0.2,
+    });
+}
+
+tl.from(".lower",{
     opacity:0,
-    y:20,
+    x:"-30",
     duration:.5,
-    stagger: .2,
 })
+
+tl.from(".image",{
+    opacity:0,
+    y:"-30",
+    duration:.5,
+});
+
+
+console.log(window)
+
+
+
+
+
+
+
+
+
+
+
 
 tl2.to(".responsiveNavbar",{
     right:0,
