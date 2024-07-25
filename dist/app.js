@@ -11,19 +11,19 @@ const tl2 = gsap.timeline();
 
 
 
-// tl.from(".myName h1",{
-//     opacity:0,
-//     y:30,
-//     duration:1,
-//     delay:.2,
-//     stagger:.2, 
-// });
+tl.from(".myName h1",{
+    opacity:0,
+    y:30,
+    duration:1,
+    delay:.2,
+    stagger:.2, 
+});
 
-// tl.to(".loader",{
-//     top:"-100%",
-//     duration:.9,
-//     ease:"power1.in"
-// });
+tl.to(".loader",{
+    top:"-100%",
+    duration:.9,
+    ease:"power1.in"
+});
 
 tl.from(".logo",{
     opacity:0,
@@ -75,7 +75,7 @@ if(window.innerWidth < 700){
 if(window.innerWidth < 700){
   tl.from(".skillLine h1",{
     opacity:0,
-    x:-50,
+    x:50,
     duration:25,
     delay:1,
     filter: "blur(5px)",
