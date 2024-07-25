@@ -22,7 +22,7 @@ tl.from(".myName h1",{
 tl.to(".loader",{
     top:"-100%",
     duration:.9,
-    ease:"power1.in"
+    ease:"power1.out"
 });
 
 tl.from(".logo",{
